@@ -16,23 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    
-    NSDate *date = [NSDate date];
-
-    if (![date.description containsString:@"2021"]) {
-        [NSApp terminate:nil];
-    }
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(windowWillClose:)
-                                                 name:NSWindowWillCloseNotification
-                                               object:nil];
-    
-    
-    
-    
-    
+ 
 }
 
 
@@ -40,12 +24,6 @@
     // Insert code here to tear down your application
 }
 
-- (void)windowWillClose:(NSNotification *)notification {
-    id obj = notification.object;
-    if ([[obj title] length]) {
-        [NSApp terminate:nil];
-    }
-    
-}
+
 
 @end
